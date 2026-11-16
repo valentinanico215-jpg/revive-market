@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReVIVE Market | Compra consciente</title>
+<style>
+:root {
+  --verde:#244b3b;
+  --verde2:#52745b;
+  --crema:#f7f5ed;
+  --naranja:#d58b58;
+  --texto:#26372e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--texto);
+  background:var(--crema);
+}
+header{
+  background:var(--verde);
+  color:white;
+  padding:20px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo{font-size:25px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#c9d9b8}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+}
+.hero{
+  padding:85px 8%;
+  background:linear-gradient(110deg,#e4eadc,#f7f5ed);
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  align-items:center;
+  gap:35px;
+}
+.hero h1{
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.08;
+  margin:10px 0 20px;
+  color:var(--verde);
+}
+.hero p{font-size:18px;line-height:1.7;max-width:540px}
+.etiqueta{
+  color:var(--verde2);
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+}
+.btn{
+  display:inline-block;
+  background:var(--verde);
+  color:white;
+  padding:14px 23px;
+  border:0;
+  border-radius:5px;
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:bold;
+  margin-top:12px;
+}
+.btn:hover{background:var(--verde2)}
+.hero-art{
+  min-height:270px;
+  border-radius:50% 50% 15px 15px;
+  background:linear-gradient(145deg,#b6c9a8,#6f9476);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:105px;
+}
+section{padding:65px 8%}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:32px;color:var(--verde)}
+.section-title p{color:#65736a}
+.benefits{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  text-align:center;
+}
+.benefit{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+}
+.benefit .emoji{font-size:35px}
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.product{
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 15px #26372e12;
+}
+.product-art{
+  height:170px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:75px;
+  background:#e7eddf;
+}
+.product-info{padding:20px}
+.product-info h3{margin:0 0 8px}
+.price{font-weight:bold;color:var(--verde);font-size:19px}
+.product-info p{color:#66736a;line-height:1.5;min-height:42px}
+.product-info button{width:100%}
+.about{
+  background:#e5ebdf;
+  text-align:center;
+}
+.about p{
+  max-width:760px;
+  margin:0 auto;
+  line-height:1.8;
+}
+.cart{
+  background:white;
+  border-radius:12px;
+  padding:25px;
+  max-width:750px;
+  margin:auto;
+}
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid #eee;
+}
+.cart-item button{
+  border:0;
+  background:#e8eee4;
+  padding:7px 11px;
+  cursor:pointer;
+  border-radius:4px;
+}
+.total{
+  font-size:22px;
+  font-weight:bold;
+  text-align:right;
+  margin-top:20px;
+}
+.empty{text-align:center;color:#788078;padding:20px}
+footer{
+  background:var(--verde);
+  color:white;
+  padding:35px 8%;
+  text-align:center;
+  line-height:1.8;
+}
+footer small{color:#d5dfd0}
+@media(max-width:750px){
+  .hero{grid-template-columns:1fr;padding:55px 7%}
+  .hero-art{min-height:190px}
+  .products{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr}
+  nav a{margin-left:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Re<span>VIVE</span> Market</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#carrito">Carrito 🛒</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div>
+    <div class="etiqueta">Consumo responsable · Vida sostenible</div>
+    <h1>Pequeños cambios, un futuro mejor.</h1>
+    <p>Descubre productos reutilizables y ecológicos que te ayudan a cuidar el planeta sin renunciar al estilo y la comodidad.</p>
+    <a class="btn" href="#productos">Explorar productos</a>
+  </div>
+  <div class="hero-art">🌿♻️</div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Compra con propósito</h2>
+    <p>Un estilo de vida más consciente comienza con tus decisiones.</p>
+  </div>
+  <div class="benefits">
+    <div class="benefit">
+      <div class="emoji">🌎</div>
+      <h3>Menos residuos</h3>
+      <p>Alternativas reutilizables para reducir desechos.</p>
+    </div>
+    <div class="benefit">
+      <div class="emoji">🌱</div>
+      <h3>Consumo consciente</h3>
+      <p>Productos seleccionados para una vida sostenible.</p>
+    </div>
+    <div class="benefit">
+      <div class="emoji">💚</div>
+      <h3>Hábitos positivos</h3>
+      <p>Pequeñas acciones que generan grandes cambios.</p>
+    </div>
+  </div>
+</section>
+
+<section id="productos">
+  <div class="section-title">
+    <h2>Nuestros productos</h2>
+    <p>Elige tus favoritos y comienza a transformar tus hábitos.</p>
+  </div>
+  <div class="products" id="catalogo"></div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="section-title">
+    <h2>¿Quiénes somos?</h2>
+  </div>
+  <p>ReVIVE Market es una propuesta de comercio electrónico enfocada en ofrecer productos reutilizables y alternativas sostenibles para la vida cotidiana. Nuestro propósito es promover el consumo responsable mediante una experiencia de compra digital sencilla, accesible y consciente.</p>
+</section>
+
+<section id="carrito">
+  <div class="section-title">
+    <h2>Tu carrito de compras</h2>
+    <p>Revisa los productos que elegiste.</p>
+  </div>
+  <div class="cart">
+    <div id="lista-carrito"><p class="empty">Tu carrito está vacío 🌿</p></div>
+    <div class="total" id="total">Total: $0 MXN</div>
+    <button class="btn" onclick="comprar()">Continuar compra</button>
+    <p id="mensaje" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">ReVIVE Market</div>
+  Compra consciente, vive sostenible.
+  <br>
+  <small>Proyecto académico de comercio electrónico · 2026</small>
+</footer>
+
+<script>
+const productos = [
+ {id:1,nombre:"Botella reutilizable",precio:249,emoji:"🧴",desc:"Botella práctica para hidratarte todos los días."},
+ {id:2,nombre:"Bolsa ecológica",precio:89,emoji:"🛍️",desc:"Alternativa reutilizable para tus compras."},
+ {id:3,nombre:"Cepillo de bambú",precio:59,emoji:"🪥",desc:"Una opción diferente para tu rutina diaria."},
+ {id:4,nombre:"Popote reutilizable",precio:49,emoji:"🥤",desc:"Ideal para reducir el uso de plásticos."},
+ {id:5,nombre:"Kit de cubiertos",precio:129,emoji:"🍴",desc:"Lleva tus cubiertos reutilizables contigo."},
+ {id:6,nombre:"Contenedor ecológico",precio:179,emoji:"🥡",desc:"Guarda tus alimentos de forma práctica."}
+];
+
+let carrito = [];
+
+function mostrarProductos(){
+ const catalogo=document.getElementById("catalogo");
+ catalogo.innerHTML=productos.map(p=>`
+ <article class="product">
+  <div class="product-art">${p.emoji}</div>
+  <div class="product-info">
+   <h3>${p.nombre}</h3>
+   <p>${p.desc}</p>
+   <div class="price">$${p.precio} MXN</div>
+   <button class="btn" onclick="agregar(${p.id})">Agregar al carrito</button>
+  </div>
+ </article>`).join("");
+}
+
+function agregar(id){
+ const existente=carrito.find(p=>p.id===id);
+ if(existente){existente.cantidad++;}
+ else{carrito.push({id,cantidad:1});}
+ actualizarCarrito();
+}
+
+function cambiarCantidad(id,cambio){
+ const item=carrito.find(p=>p.id===id);
+ if(!item)return;
+ item.cantidad+=cambio;
+ if(item.cantidad<=0){
+  carrito=carrito.filter(p=>p.id!==id);
+ }
+ actualizarCarrito();
+}
+
+function actualizarCarrito(){
+ const lista=document.getElementById("lista-carrito");
+ const total=document.getElementById("total");
+ if(carrito.length===0){
+  lista.innerHTML='<p class="empty">Tu carrito está vacío 🌿</p>';
+ }else{
+  lista.innerHTML=carrito.map(item=>{
+   const p=productos.find(x=>x.id===item.id);
+   return `<div class="cart-item">
+    <div><strong>${p.nombre}</strong><br>$${p.precio} MXN × ${item.cantidad}</div>
+    <div>
+     <button onclick="cambiarCantidad(${p.id},-1)">−</button>
+     ${item.cantidad}
+     <button onclick="cambiarCantidad(${p.id},1)">+</button>
+    </div>
+   </div>`;
+  }).join("");
+ }
+ const suma=carrito.reduce((s,item)=>{
+  const p=productos.find(x=>x.id===item.id);
+  return s+p.precio*item.cantidad;
+ },0);
+ total.textContent="Total: $"+suma+" MXN";
+}
+
+function comprar(){
+ const mensaje=document.getElementById("mensaje");
+ if(carrito.length===0){
+  mensaje.textContent="Agrega al menos un producto para continuar.";
+  return;
+ }
+ mensaje.textContent="¡Gracias por elegir ReVIVE Market! Esta es una demostración académica: no se realizan pagos reales.";
+}
+
+mostrarProductos();
+actualizarCarrito();
+</script>
+</body>
+</html>
